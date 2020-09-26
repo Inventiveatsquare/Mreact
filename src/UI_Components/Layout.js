@@ -14,6 +14,8 @@ class MainLayout extends Component {
           <div className="">
                <NavbarTop/>
                <ContentArea/>
+               <ContentArea/>
+               <ContentArea/>
                <BottomNav/>
           </div>
          

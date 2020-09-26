@@ -1,14 +1,11 @@
 import React from 'react';
 import classes from '../App.css';
-import AppBar from '@material-ui/core/AppBar';
-import { Select, InputBase, FormControl, InputLabel, Button }  from '@material-ui/core';
-import Toolbar from '@material-ui/core/Toolbar';
-import IconButton from '@material-ui/core/IconButton';
-import Typography from '@material-ui/core/Typography';
+
+import {AppBar, Toolbar, MenuItem,  Select,  InputBase, FormControl, InputLabel, Button }  from '@material-ui/core';
+
 import { fade, makeStyles } from '@material-ui/core/styles';
-import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
-import MenuItem from '@material-ui/core/MenuItem';
+
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -67,11 +64,11 @@ const useStyles = makeStyles((theme) => ({
 export default function NavbarTop() {
   const classes = useStyles();
 
-  const [city, setAge] = React.useState('');
+  const [City, setCity] = React.useState('');
   const [open, setOpen] = React.useState(false);
 
   const handleChange = (event) => {
-    setAge(event.target.value);
+    setCity(event.target.value);
   };
 
   const handleClose = () => {
@@ -90,14 +87,14 @@ export default function NavbarTop() {
         
           <div  className={classes.searchtab}  noWrap>
           <FormControl className={classes.formControl }>
-       <InputLabel id="demo-controlled-open-select-label">city</InputLabel>
+              <InputLabel id="demo-controlled-open-select-label">City</InputLabel>
        <Select
          labelId="demo-controlled-open-select-label"
          id="demo-controlled-open-select"
          open={open}
          onClose={handleClose}
          onOpen={handleOpen}
-         value={city}
+         value={City}
          onChange={handleChange}
        >
          <MenuItem value="">
@@ -105,25 +102,25 @@ export default function NavbarTop() {
          </MenuItem>
          <MenuItem value={10}>Delhi</MenuItem>
          <MenuItem value={20}>Chandigarh</MenuItem>
-         <MenuItem value={30}>Kolkata</MenuItem>
+         <MenuItem value={30}>Goa</MenuItem>
        </Select>
      </FormControl>
           </div>
+
+
           <div className={classes.search}>
-            <div className={classes.searchIcon}>
+            <div className={classes.searchIcon}> 
               <SearchIcon />
             </div>
             <InputBase
               placeholder="Search…"
-              classes={{
-                root: classes.inputRoot,
-                input: classes.inputInput,
-              }}
+              classes={ classes.searchInput}
               inputProps={{ 'aria-label': 'search' }}
             />
           </div>
         </Toolbar>
       </AppBar>
     </div>
+    
   );
 }

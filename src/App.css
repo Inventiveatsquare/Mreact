@@ -2,6 +2,11 @@
 .roots {
 max-width: 345px;
 }
+
+.searchicon{
+  position: absolute;
+    left: -20%;
+}
 .MuiCardMedia-root {
  height: 140px;
 }
@@ -10,15 +15,58 @@ max-width: 345px;
   float: left;
   margin: 1%;
 }
+.searchInput {
+  color:#444 !important;
+}
 
+.MuiAppBar-colorPrimary {
+  color: #fff;
+  background-color: #ffffff !important;
+  border-bottom: 10px solid #eae0e0e6 !important;
+}
+
+.MuiBottomNavigationAction-label.MuiBottomNavigationAction-iconOnly {
+  opacity: 1 !important;
+}
+.MuiBottomNavigationAction-root {
+   color: #8E44AD !important;
+}
 .makeStyles-searchtab-3
 {
   text-align: left !important;
 }
+
+.makeStyles-searchIcon-5 {
+
+  position: absolute;
+  left: -40px;
+  color: #1d1b1b;
+}
 .App {
   text-align: center;
 }
+.MuiSelect-select.MuiSelect-select {
+  padding-right: 40px !important;
+}
 
+.item-container {
+  display: flex;
+  overflow-x: scroll;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.item {
+  padding: 0 30px 50px 30px;
+  margin-right: 2px;
+  background-color: #ffffff;
+  flex-shrink: 0;
+}
+
+.item-controls {
+  text-align: center;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
